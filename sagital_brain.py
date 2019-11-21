@@ -2,7 +2,6 @@ from argparse import ArgumentParser, ArgumentDefaultsHelpFormatter
 
 import numpy as np
 
-
 def run_averages(file_input='brain_sample.csv', file_output='brain_average.csv'):
     """
     Calculates the average through the coronal planes
@@ -25,7 +24,7 @@ def run_averages(file_input='brain_sample.csv', file_output='brain_average.csv')
 if __name__ == "__main__":
     parser = ArgumentParser(description="Calculates the average for each sagital-horizontal plane.",
                             formatter_class=ArgumentDefaultsHelpFormatter)
-    parser.add_argument('file_input', nargs='?', default="brain_sample.csv",
+    parser.add_argument('file_input', nargs='?', default="brain_sample_broken.csv",
                         help="Input CSV file with the results from scikit-brain binning algorithm.")
     parser.add_argument('--file_output', '-o', default="brain_average.csv",
                         help="Name of the output CSV file.")
